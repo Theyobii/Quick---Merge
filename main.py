@@ -31,8 +31,7 @@ def merge_sort(carros: List[Dict]) -> List[Dict]:
 def merge(izquierdo: List[Dict], derecho: List[Dict]) -> List[Dict]:
     resultado = []
     i = j = 0
-    while i < len(izquierdo) and j < len(derecho):
-        # Ordenar por Prioridad y luego por Tiempo
+    while i < len(izquierdo) and j < len(derecho): # Ordenar por Prioridad y luego por Tiempo
         if derecho[i]["Prioridad"] < derecho[j]["Prioridad"] or \
            (derecho[i]["Prioridad"] == derecho[j]["Prioridad"] and izquierdo[i]["Tiempo"] < derecho[j]["Tiempo"]):
             resultado.append(izquierdo[i])
